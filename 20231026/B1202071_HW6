@@ -1,0 +1,116 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-JG9uvraiwCh",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d33ece18-824b-4a7a-cd93-6ad87260c543"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "輸入聖誕樹高度 : 7\n",
+            "      *\n",
+            "     ***\n",
+            "    *****\n",
+            "   *******\n",
+            "  *********\n",
+            " ***********\n",
+            "*************\n",
+            "     ***\n",
+            "     ***\n",
+            "     ***\n",
+            "     ***\n",
+            "     ***\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        " high = int(input(\"輸入聖誕樹高度 : \" ))\n",
+        "\n",
+        " def Xmas(high):\n",
+        "  for i in range(1, high+1):\n",
+        "   space = high - i\n",
+        "   stars = 2 * i - 1\n",
+        "   tree = ' ' * space + '*' * stars\n",
+        "   print(tree)\n",
+        "\n",
+        "  for j in range(0, 5):\n",
+        "   block = high - 2\n",
+        "   wood = 3\n",
+        "   trunk = \" \" * block + \"*\" * wood\n",
+        "   print(trunk)\n",
+        "\n",
+        " Xmas(high)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " def  calculate_bmi(height, weight):\n",
+        "  bmi = weight / ( height / 100 ) ** 2\n",
+        "\n",
+        "  if bmi < 18.5:\n",
+        "    bmi = \"BMI: \" + str(bmi)\n",
+        "    status = \"體位：過輕\"\n",
+        "  elif 18.5 <= bmi <24:\n",
+        "    bmi = \"BMI: \" + str(bmi)\n",
+        "    status = \"體位：適中\"\n",
+        "  elif 24 <= bmi <27:\n",
+        "    bmi = \"BMI: \" + str(bmi)\n",
+        "    status = \"體位：過重\"\n",
+        "  elif bmi >27:\n",
+        "    bmi = \"BMI: \" + str(bmi)\n",
+        "    status = \"體位：肥胖\"\n",
+        "\n",
+        "  return bmi, status   #會印的東西\n",
+        "\n",
+        " height = float(input(\"身高(公分) : \"))\n",
+        " weight = float(input(\"體重 : \"))\n",
+        " result = calculate_bmi(height, weight)\n",
+        "\n",
+        " print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fmo_POlstpmZ",
+        "outputId": "0918f7b5-77ba-49bf-f20c-fb5b430981c3"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "身高(公分) : 160\n",
+            "體重 : 50\n",
+            "('BMI: 19.531249999999996', '體位：適中')\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
